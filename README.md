@@ -22,6 +22,8 @@ Vamos usar um módulo de som e controlar 10 LEDs com um único pino no Arduino, 
 
 ---
 
+![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
+
 ## Materiais Utilizados
 - Protoboard
 - Jumpers Macho-Macho
@@ -94,7 +96,7 @@ void loop() {
 
 
 ### Demonstração
-[Clique aqui para ver o projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+[Clique aqui para ver o projeto funcionando no Tinkercad!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
 
 *Nota: A demonstração exibe apenas os LEDs. O projeto também inclui um módulo sensor de som.*
 
@@ -160,4 +162,15 @@ void loop() {
 }
 
 ```
+## Imagens 
+
+![foto2](https://github.com/user-attachments/assets/e3c17625-431e-46e6-9b6e-890a4efefcdc)
+
+
+![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
+
+[Clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+
+
+
 
