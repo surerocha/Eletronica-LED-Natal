@@ -172,5 +172,16 @@ void loop() {
 📽️ [Por último, clique aqui para ver o vídeo do projeto funcionando!](https://youtu.be/PH8cr4nVyqw)
 
 
+![1](https://github.com/user-attachments/assets/c342d7bb-f9f6-473e-be0b-b41c4f2c841a)
+![2](https://github.com/user-attachments/assets/34131f4f-4156-4e6f-b9fa-ecf3b7cc12f0)
+![3](https://github.com/user-attachments/assets/5c066dcc-caf5-4c03-ab6f-955cd3d5a3d0)
+![4](https://github.com/user-attachments/assets/970ed447-210f-4e92-a1e2-b1fa2f15fda8)
+![5](https://github.com/user-attachments/assets/7c67d323-bb9c-4c97-b422-1109614f17d6)
+
+
+
+
+
+
 
 
