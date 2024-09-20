@@ -1,8 +1,8 @@
-# Projeto: Piscou, é Natal! 
-### Disciplina: Eletrônica para Informática
+# Projeto: Piscou, é Natal! 🎄
+### Disciplina: Eletrônica para Informática 🪫💻
 ---
 
-### Equipe
+### Equipe 
 - **Estudantes:**
   - [Anderson Maia](https://github.com/TheAnders007)
   - [Isabelly Barbosa](https://github.com/isabellybarbosac)
@@ -14,7 +14,7 @@
 
 ---
 
-## Descrição
+## Descrição ✍️
 Repositório destinado à publicação do projeto "Piscou, é Natal!" desenvolvido na disciplina de Eletrônica para Informática. O projeto consiste em um conjunto de LEDs que pisca em diferentes padrões, simulando a decoração natalina.
 
 
@@ -24,7 +24,7 @@ Vamos usar um módulo de som e controlar 10 LEDs com um único pino no Arduino, 
 
 ![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
 
-## Materiais Utilizados
+## Materiais Utilizados ✅
 - Protoboard
 - Jumpers Macho-Macho
 - Resistores de 220 Ohms
@@ -87,7 +87,7 @@ void loop() {
    - Lê o valor do sensor de som.
    - Se o valor ultrapassar o limite definido, os LEDs acendem; caso contrário, apagam.
 
-### Montagem Visual:
+### Montagem Visual 👀
 
 #### Layout Básico:
 
@@ -108,7 +108,7 @@ void loop() {
 
 ---
 
-## Código Fonte no Tinkercad com o Potenciômetro
+## Código Fonte no Tinkercad com o Potenciômetro 💻
 
 ```cpp
 const int ledPin = 3; // Pino dos LEDs
@@ -135,7 +135,7 @@ void loop()
 
 ```
 
-## Código Fonte no simulador com o Módulo Sensor de Som
+## Código Fonte no simulador com o Módulo Sensor de Som 💻
 
 ```cpp
 const int ledPin = 3; // Pino dos LEDs
@@ -162,14 +162,14 @@ void loop() {
 }
 
 ```
-## Imagens
+## Imagens 📷
 
 ![foto2](https://github.com/user-attachments/assets/e3c17625-431e-46e6-9b6e-890a4efefcdc)
 
 
 ![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
 
-[Por último, clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+📽️ [Por último, clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
 
 
 
