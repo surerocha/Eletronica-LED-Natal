@@ -1,6 +1,5 @@
 # Projeto: Piscou, é Natal! 
 ### Disciplina: Eletrônica para Informática
-
 ---
 
 ### Equipe
@@ -12,19 +11,14 @@
   - [Thalita Suzy](https://github.com/thalitaasuzy)
   - [Thayná Albano](https://github.com/thaynaxt)
 
----
-
-![Projeto](https://github.com/user-attachments/assets/b38a35d1-5c4a-40b5-8b74-531c01ac5f0e)
-
-### Demonstração
-[Clique aqui para ver o projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
-
-*Nota: A demonstração e a imagem exibem apenas os LEDs. O projeto também inclui um módulo sensor de som e toca música.*
 
 ---
 
 ## Descrição
 Repositório destinado à publicação do projeto "Piscou, é Natal!" desenvolvido na disciplina de Eletrônica para Informática. O projeto consiste em um conjunto de LEDs que pisca em diferentes padrões, simulando a decoração natalina.
+
+
+Vamos usar um módulo de som e controlar 10 LEDs com um único pino no Arduino, conectando os LEDs em paralelo e usar o módulo de som para determinar a intensidade da luz dos LEDs. Abaixo estão as instruções de montagem e o código necessário.
 
 ---
 
@@ -37,22 +31,10 @@ Repositório destinado à publicação do projeto "Piscou, é Natal!" desenvolvi
 - LEDs
 
 
-<h2>Projeto Final - Eletrônica Digital</h2>
-
-Vamos usar um módulo de som e controlar 4 LEDs com um único pino no Arduino, conectando os LEDs em paralelo e usar o módulo de som para determinar a intensidade da luz dos LEDs. Abaixo estão as instruções de montagem e o código necessário.
-
-### Materiais Necessários:
-- 1 Placa Arduino Uno
-- 4 LEDs
-- 4 Resistores de 220 ohm
-- 1 Módulo Sensor de Som
-- Jumpers macho-macho
-- Protoboard
-
 ### Conexões:
 
 1. **LEDs**:
-   - Conecte o ânodo (perna longa) de todos os 4 LEDs juntos e ligue-os ao pino 3 do Arduino.
+   - Conecte o ânodo (perna longa) de todos os 10 LEDs juntos e ligue-os ao pino 3 do Arduino.
    - Conecte o cátodo (perna curta) de cada LED ao GND através de um resistor de 220 ohm.
 
 2. **Módulo Sensor de Som**:
@@ -62,9 +44,32 @@ Vamos usar um módulo de som e controlar 4 LEDs com um único pino no Arduino, c
 
 ### Código:
 
-Aqui está um exemplo de código que acende os LEDs com base nos níveis de som detectados pelo sensor:
+Aqui está o código que acende os LEDs com base nos níveis de som detectados pelo sensor:
 
->
+```cpp
+const int ledPin = 3; // Pino dos LEDs
+const int soundSensorPin = A0; // Pino do sensor de som
+const int threshold = 500; // Limite para detectar som (ajuste conforme necessário)
+
+void setup() {
+    pinMode(ledPin, OUTPUT); // Configura o pino dos LEDs como saída
+    Serial.begin(9600); // Inicia a comunicação serial
+}
+
+void loop() {
+    int soundValue = analogRead(soundSensorPin); // Lê o valor do sensor de som
+    Serial.println(soundValue); // Mostra o valor lido no monitor serial
+
+    // Se o som ultrapassar o limite, acenda os LEDs
+    if (soundValue > threshold) {
+        analogWrite(ledPin, 255); // Acende os LEDs com máxima intensidade
+    } else {
+        analogWrite(ledPin, 0); // Apaga os LEDs
+    }
+
+    delay(50); // Pequeno atraso para estabilidade
+}
+```
 
 ### Explicação do Código:
 
@@ -84,16 +89,75 @@ Aqui está um exemplo de código que acende os LEDs com base nos níveis de som 
 
 #### Layout Básico:
 
-![Captura de Tela 2024-09-19 às 16 07 02](https://github.com/user-attachments/assets/3ead4a73-0984-4634-8674-36393e9dfb12)
+
+![Projeto](https://github.com/user-attachments/assets/85b4e74f-dba7-4a38-841b-be07b41cc69d)
+
+
+### Demonstração
+[Clique aqui para ver o projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+
+*Nota: A demonstração exibe apenas os LEDs. O projeto também inclui um módulo sensor de som.*
 
 
 ### Observações:
-- No layout apresentado, o potenciômetro foi usado para substituir o módulo sensor de som na simulação. Ao fazer montagem real, trocar pelo módulo
+- No layout apresentado, o potenciômetro foi usado para substituir o módulo sensor de som na simulação pois no Tinkercad não há o módulo sensor de som. Ao fazer montagem real, trocar pelo módulo.
 - Todos os LEDs acenderão juntos com base no som detectado pelo sensor.
 - Ajuste o valor de `threshold` no código para se adequar ao ambiente.
 
 ---
 
-## Código Fonte
+## Código Fonte no Tinkercad com o Potenciômetro
 
 ```cpp
+const int ledPin = 3; // Pino dos LEDs
+const int potPin = A0; //Pino do potenciometro
+
+void setup()
+{
+  pinMode(ledPin, OUTPUT); // Configura o pino dos LEDs como saída
+}
+
+void loop()
+{
+  int potValue = analogRead(potPin); // Lê o valor do potenciometro
+  int ledValue;
+
+  // Mapeia o valor do potênciometro para a intensidade do led
+  ledValue = map(potValue, 0, 1023, 0, 255); // Mapeia de 0 a 255
+
+  // Acende os LEDs com base no potenciômetro
+  analogWrite(ledPin, ledValue); // Define a intensidade do LED
+
+  delay(50); // Pequeno atraso para ter estabilidade
+}
+
+```
+
+## Código Fonte no simulador com o Módulo Sensor de Som
+
+```cpp
+const int ledPin = 3; // Pino dos LEDs
+const int soundSensorPin = A0; // Pino do sensor de som
+const int threshold = 50; // Limite para detectar som (ajuste conforme necessário)
+
+void setup() {
+    pinMode(ledPin, OUTPUT); // Configura o pino dos LEDs como saída
+    Serial.begin(9600); // Inicia a comunicação serial
+}
+
+void loop() {
+    int soundValue = analogRead(soundSensorPin); // Lê o valor do sensor de som
+    Serial.println(soundValue); // Mostra o valor lido no monitor serial
+
+    // Se o som ultrapassar o limite, acenda os LEDs
+    if (soundValue > threshold) {
+        analogWrite(ledPin, 255); // Acende os LEDs com máxima intensidade
+    } else {
+        analogWrite(ledPin, 0); // Apaga os LEDs
+    }
+
+    delay(10); // Pequeno atraso para estabilidade
+}
+
+```
+
