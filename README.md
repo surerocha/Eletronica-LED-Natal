@@ -162,14 +162,14 @@ void loop() {
 }
 
 ```
-## Imagens 
+## Imagens
 
 ![foto2](https://github.com/user-attachments/assets/e3c17625-431e-46e6-9b6e-890a4efefcdc)
 
 
 ![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
 
-[Clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+[Por último, clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
 
 
 
