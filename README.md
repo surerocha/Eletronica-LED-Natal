@@ -169,7 +169,7 @@ void loop() {
 
 ![foto1](https://github.com/user-attachments/assets/82f716f6-f725-43cb-ad3e-5dc3b37d1d94)
 
-📽️ [Por último, clique aqui para ver o vídeo do projeto funcionando!](https://www.tinkercad.com/things/38J4pOIDzJA-projeto-eletronica)
+📽️ [Por último, clique aqui para ver o vídeo do projeto funcionando!](https://youtu.be/PH8cr4nVyqw)
 
 
 
