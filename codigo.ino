@@ -1,5 +1,5 @@
 // C++ code
-//
+//Primeira versão do Projeto sem o módulo sensor de som
 void setup()
 {
   pinMode(13, OUTPUT);
